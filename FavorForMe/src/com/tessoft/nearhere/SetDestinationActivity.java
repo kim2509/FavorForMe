@@ -178,7 +178,7 @@ implements OnMapReadyCallback, AddressTaskDelegate {
 		selectedAddress = Util.getDongAddressString( result );
 		
 		title = "위치 : " + Util.getDongAddressString( result );
-		txtTitle.setText( title );
+		txtTitle.setText( title + " " + selectedLocation.latitude + " , " + selectedLocation.longitude );
 		
 		findViewById(R.id.btnSetDestination).setEnabled(true);
 	}
