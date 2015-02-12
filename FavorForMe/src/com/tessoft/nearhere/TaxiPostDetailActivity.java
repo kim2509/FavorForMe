@@ -471,16 +471,8 @@ implements OnMapReadyCallback, ConnectionCallbacks, OnConnectionFailedListener, 
 					adapter.setItemList( post.getPostReplies() );
 					adapter.notifyDataSetChanged();
 
-					if ( "true".equals( getMetaInfoString("admin") ) || post.getUser().getUserID().equals( getLoginUser().getUserID() ))
-					{
-						menu.findItem(R.id.action_edit).setVisible(true);
-						menu.findItem(R.id.action_delete).setVisible(true);	
-					}
-					else
-					{
-						menu.findItem(R.id.action_edit).setVisible(false);
-						menu.findItem(R.id.action_delete).setVisible(false);
-					}
+					menu.findItem(R.id.action_edit).setVisible(true);
+					menu.findItem(R.id.action_delete).setVisible(true);
 					
 					ImageView imgStatus = (ImageView) header.findViewById(R.id.imgStatus);
 					imgStatus.setVisibility(ViewGroup.VISIBLE);
